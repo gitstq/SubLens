@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sublens"
+version = "1.0.0"
+description = "零依赖、离线优先的字幕解析、时间轴变换与质量审计工具箱 | Zero-dependency subtitle parsing, timeline transformation & quality audit toolkit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = ["subtitle", "srt", "vtt", "webvtt", "audit", "timeline", "zero-dependency"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+sublens = "sublens.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/SubLens"
+Repository = "https://github.com/gitstq/SubLens"
+Issues = "https://github.com/gitstq/SubLens/issues"
+
+[tool.setuptools]
+packages = ["sublens"]
